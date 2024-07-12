@@ -30,7 +30,7 @@ echo "Old Modules to be removed:"
 echo "$OLD_MODULES"
 
 if [ "$1" == "exec" ]; then
-  apt-get purge $OLD_KERNELS
+  apt-get purge -y $OLD_KERNELS
   for module in $OLD_MODULES ; do
     rm -rf /lib/modules/$module/
   done
